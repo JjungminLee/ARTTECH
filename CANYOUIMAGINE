@@ -1,0 +1,90 @@
+color c[]={#F0C2C2,#FAB867,#FFFBAF,#C1FFAF,#AFB4FF};
+
+//random dir
+float dirX[]=new float[5];
+float dirY[]=new float[5];
+// different speed
+float xDir[]={1,2,3,1.2,2.2};
+
+// cnt array
+int cnt[]={0,0,0,0,0};
+
+void setup(){
+ size(600,600); 
+ 
+ for(int i=0;i<5;i++){
+    dirX[i]=random(100,500);
+    dirY[i]=random(100,500);
+ }
+}
+
+void draw(){
+  background(255);
+  /*
+  //using for loop
+  int idx=0;
+  for(int i=66;i<=550;i+=108){
+    fill(c[idx]);
+    ellipse(i,200,80,80);
+    idx++;
+  }
+  */
+  
+  //using translate
+  /*
+  for(int i=1;i<=5;i++){
+    pushMatrix();
+      fill(c[i-1]);
+      translate(i*100,300);
+      ellipse(0,0,50,50);
+    popMatrix();
+  }
+  
+  */
+  
+  //random direction
+  
+  
+  for(int i=0;i<5;i++){
+     
+     noStroke();
+     
+     
+     if(cnt[i]>=5){
+         noFill();
+         
+     }else{
+       
+       fill(c[i]);
+       ellipse(dirX[i],dirY[i],50,50);
+       
+       fill(0);
+       textSize(30);
+       
+       
+       
+       text(Integer.toString(cnt[i]),dirX[i],dirY[i]);
+        
+     }
+     
+     if((dirX[i]+25)>600){
+        cnt[i]++;
+        
+        xDir[i]*=-1; //reverse direction
+     }
+     else if((dirX[i]-25)<0){
+        cnt[i]++;
+        xDir[i]*=-1; 
+        
+     }
+     
+     
+     dirX[i]+=xDir[i];
+  }
+  
+  
+  
+ 
+  
+  
+}
