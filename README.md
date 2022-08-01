@@ -9,4 +9,6 @@
 
 Mouse Interaction을 통해 마우스를 클릭하면 화면이 바뀜.
 
+아래는 결과물 예시입니다. 
+
 ![image](https://user-images.githubusercontent.com/85864699/177910639-f5b5842a-8f98-4ef5-94f8-9e9fedd56d37.png)
