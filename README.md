@@ -1,5 +1,5 @@
 
-# 🎀 1학년 1학기 Art&Technology 기말과제
+# 🎀 2022 1학년 1학기 Art&Technology 기말과제
 
 🎀 사용언어 : 프로세싱
 
